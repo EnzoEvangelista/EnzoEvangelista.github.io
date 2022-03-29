@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Level 3</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+.btn {
+border: solid 2px black;
+}
+</style>
+</head>
+<body>
+<div class="sub">
+<button type="button" id="rd" class="btn btw-light" onclick="red()">Red</button>
+</div>
+<div class="sub">
+<button type="button" id="blu" class="btn btw-light" onclick="blue()">Blue</button>
+</div>
+<div class="sub">
+<button type="button" id="ylw" class="btn btw-light" onclick="yellow()">Yellow</button>
+</div>
+<div class="sub">
+<button type="button" id="grn" class="btn btw-light" onclick="green()">Green</button>
+</div>
+<div class="sub">
+<button type="button" id="orng" class="btn btw-light" onclick="orange()">Orange</button>
+</div>
+<div class="sub">
+<button type="button" id="start" class="btn btw-light" 
+onclick="one();setTimeout(two, 1000);setTimeout(three, 2000);setTimeout(four, 3000);setTimeout(five, 4000);
+setTimeout(six, 5000);setTimeout(seven, 6000);setTimeout(eight, 7000);setTimeout(nine, 8000);setTimeout(ten, 9000)
+;setTimeout(enable, 10000)">
+Start</button>
+</div>
+<script>
+var comb = "0"
+document.getElementById('rd').disabled = true;
+document.getElementById('blu').disabled = true;
+document.getElementById('ylw').disabled = true;
+document.getElementById('grn').disabled = true;
+document.getElementById('orng').disabled = true;
+function red(){
+if (comb == "5"){
+comb = "6"
+} else if (comb == "7"){
+comb = "8"
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function blue(){
+if (comb == "2"){
+comb = "3"
+} else if (comb == "6"){
+comb = "7"
+} else if (comb == "9"){
+alert('yoo pog u won');
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function yellow(){
+if (comb == "0"){
+comb = "1"
+} else if (comb == "4"){
+comb = "5"
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function green(){
+if (comb == "3"){
+comb = "4"
+} else if (comb == "8"){
+comb = "9"
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function orange(){
+if (comb == "1"){
+comb = "2"
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function one(){
+document.getElementById('ylw').innerHTML = '1';
+document.getElementById('start').disabled = true;
+}
+function two(){
+document.getElementById('orng').innerHTML = '2';
+}
+function three(){
+document.getElementById('blu').innerHTML = '3';
+}
+function four(){
+document.getElementById('grn').innerHTML = '4';
+}
+function five(){
+document.getElementById('ylw').innerHTML = '5';
+}
+function six(){
+document.getElementById('rd').innerHTML = '6';
+}
+function seven(){
+document.getElementById('blu').innerHTML = '7';
+}
+function eight(){
+document.getElementById('rd').innerHTML = '8';
+}
+function nine(){
+document.getElementById('grn').innerHTML = '9';
+}
+function ten(){
+document.getElementById('blu').innerHTML = '10';
+}
+function enable(){
+document.getElementById('rd').disabled = false;
+document.getElementById('blu').disabled = false;
+document.getElementById('ylw').disabled = false;
+document.getElementById('grn').disabled = false;
+document.getElementById('orng').disabled = false;
+document.getElementById('rd').innerHTML = 'Red';
+document.getElementById('blu').innerHTML = 'Blue';
+document.getElementById('ylw').innerHTML = 'Yellow';
+document.getElementById('grn').innerHTML = 'Green';
+document.getElementById('orng').innerHTML = 'Orange';
+}
+</script>
+</body>
+</html>
