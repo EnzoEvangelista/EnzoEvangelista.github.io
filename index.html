@@ -12,9 +12,6 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
 <script
 src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <style>
-@keyframes spin1 { 100% { transform:rotate(360deg); } }
-@keyframes spin2 { 100% { transform:rotate(-360deg); } }
-@keyframes idle { 100% {} }
 .btn {
 border: solid 2px black;
 }
@@ -42,9 +39,7 @@ border: solid 2px black;
 onclick="one();setTimeout(two, 1000);setTimeout(three, 2000);setTimeout(four, 3000);setTimeout(five, 4000);setTimeout(enable, 5000)">
 Start</button>
 </div>
-  <button id="dum" onlick="test()">
-    spin
-  </button>
+
 <script>
 var comb = "0"
 document.getElementById('rd').disabled = true;
@@ -126,9 +121,7 @@ document.getElementById('ylw').innerHTML = 'Yellow';
 document.getElementById('grn').innerHTML = 'Green';
 document.getElementById('orng').innerHTML = 'Orange';
 }
-function test(){
-  document.getElementById('dum').style.animation="spin2 4s linear infinite";
-}
+
 </script>
 </body>
 </html>
