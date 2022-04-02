@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Level 2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+<style>
+.bttn {
+    height: 100px;
+    width: 100px;
+}
+.bttn:disabled {
+    opacity: 0.65;
+}
+body {
+    background-image: linear-gradient(rgba(37, 39, 77, 0.3),rgba(37, 39, 77, 0.5)), url(https://media.discordapp.net/attachments/742999012554178623/958941583695310888/wallpaper2you_39986.jpg?width=768&height=480);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#rd,#grn {
+    float: inline-start;
+    font-size: 25px;
+}
+#blu,#orng {
+    float: right;
+    font-size: 25px;
+}
+#ylw {
+    font-size: 25px;
+}
+.sub1,.sub2,.sub3,.sub4 {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sub2,.sub4 {
+    width: 100px;
+}
+.sub1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.sub3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.sub4 {
+    margin-top: 100px;
+}
+#start {
+    height: 40px;
+    font-size: 20px;
+}
+.hint {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.about {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.bttn:hover, .bttn:focus, .hint:hover, .hint:focus, .about:hover, .about:focus {
+  outline: none;
+}
+
+#rd {
+    border-radius: 10px;
+    position: relative;
+    border: none;
+}
+#rd:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #FF3131;
+    border-left: 2px solid #FF3131;
+    transition: 0.5s;
+}
+#rd:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #FF3131;
+    border-right: 2px solid #FF3131;
+    transition: 0.5s;
+}
+#rd:hover:before {
+    width: 100%;
+    height: 100%;
+}
+#rd:hover:after {
+    width: 100%;
+    height: 100%;
+}
+#rd:hover {
+    box-shadow:0 0 40px #FF3131;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #FF3131;
+    transition: 0.5s;
+}
+#rd:active {
+    background-color: #FF3131;
+    box-shadow: 0 0 10px #FF3131, 0 0 40px #FF3131, 0 0 80px #FF3131;
+    border: 1px inset #FF3131;
+    transition: 0.1s;
+}
+
+#blu {
+    border-radius: 10px;
+    position: relative;
+    border: none;
+}
+#blu:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #69C6FC ;
+    border-left: 2px solid #69C6FC ;
+    transition: 0.5s;
+}
+#blu:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #69C6FC ;
+    border-right: 2px solid #69C6FC ;
+    transition: 0.5s;
+}
+#blu:hover:before {
+    width: 100%;
+    height: 100%;
+}
+#blu:hover:after {
+    width: 100%;
+    height: 100%;
+}
+#blu:hover {
+    box-shadow:0 0 40px #69C6FC ;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #69C6FC ;
+    transition: 0.5s;
+}
+#blu:active {
+    background-color: #69C6FC ;
+    box-shadow: 0 0 10px #69C6FC , 0 0 40px #69C6FC , 0 0 80px #69C6FC ;
+    border: 1px inset #69C6FC ;
+    transition: 0.1s;
+}
+
+#ylw {
+    border-radius: 10px;
+    position: relative;
+    border: none;
+}
+#ylw:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #FFF300;
+    border-left: 2px solid #FFF300;
+    transition: 0.5s;
+}
+#ylw:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #FFF300;
+    border-right: 2px solid #FFF300;
+    transition: 0.5s;
+}
+#ylw:hover:before {
+    width: 100%;
+    height: 100%;
+}
+#ylw:hover:after {
+    width: 100%;
+    height: 100%;
+}
+#ylw:hover {
+    box-shadow:0 0 40px #FFF300;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #FFF300;
+    transition: 0.5s;
+}
+#ylw:active {
+    background-color: #FFF300;
+    box-shadow: 0 0 10px #FFF300, 0 0 40px #FFF300, 0 0 80px #FFF300;
+    border: 1px inset #FFF300;
+    transition: 0.1s;
+}
+
+#grn {
+    border-radius: 10px;
+    position: relative;
+    border: none;
+}
+#grn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #39FF14;
+    border-left: 2px solid #39FF14;
+    transition: 0.5s;
+}
+#grn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #39FF14;
+    border-right: 2px solid #39FF14;
+    transition: 0.5s;
+}
+#grn:hover:before {
+    width: 100%;
+    height: 100%;
+}
+#grn:hover:after {
+    width: 100%;
+    height: 100%;
+}
+#grn:hover {
+    box-shadow:0 0 40px #39FF14;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #39FF14;
+    transition: 0.5s;
+}
+#grn:active {
+    background-color: #39FF14;
+    box-shadow: 0 0 10px #39FF14, 0 0 40px #39FF14, 0 0 80px #39FF14;
+    border: 1px inset #39FF14;
+    transition: 0.1s;
+}
+
+#orng {
+    border-radius: 10px;
+    position: relative;
+    border: none;
+}
+#orng:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #FF8300;
+    border-left: 2px solid #FF8300;
+    transition: 0.5s;
+}
+#orng:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #FF8300;
+    border-right: 2px solid #FF8300;
+    transition: 0.5s;
+}
+#orng:hover:before {
+    width: 100%;
+    height: 100%;
+}
+#orng:hover:after {
+    width: 100%;
+    height: 100%;
+}
+#orng:hover {
+    box-shadow:0 0 40px #FF8300;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #FF8300;
+    transition: 0.5s;
+}
+#orng:active {
+    background-color: #FF8300;
+    box-shadow: 0 0 10px #FF8300, 0 0 40px #FF8300, 0 0 80px #FF8300;
+    border: 1px inset #FF8300;
+    transition: 0.1s;
+}
+
+#start {
+    color: #FF44CC;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    border: none;
+    box-shadow: 5px 5px 8px #000;
+}
+#start:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+#start:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+#start:hover:before {
+    width: 100%;
+    height: 10px;
+}
+#start:hover:after {
+    width: 100%;
+    height: 10px;
+}
+#start:hover {
+    box-shadow:0 0 40px #FF44CC;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #FF44CC;
+    transition: 0.5s;
+}
+#start:active {
+    color: #25274d;
+    background-color: #FF44CC;
+    box-shadow: 0 0 10px #FF44CC, 0 0 40px #FF44CC, 0 0 80px #FF44CC;
+    border: 1px inset #FF44CC;
+    transition: 0.1s;
+}
+
+.hint {
+    color: #FF44CC;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    border: none;
+    box-shadow: 5px 5px 8px #000;
+}
+.hint:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.hint:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.hint:hover:before {
+    width: 100%;
+    height: 10px;
+}
+.hint:hover:after {
+    width: 100%;
+    height: 10px;
+}
+.hint:hover {
+    box-shadow:0 0 40px #FF44CC;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #FF44CC;
+    transition: 0.5s;
+}
+.hint:active {
+    color: #25274d;
+    background-color: #FF44CC;
+    box-shadow: 0 0 10px #FF44CC, 0 0 40px #FF44CC, 0 0 80px #FF44CC;
+    border: 1px inset #FF44CC;
+    transition: 0.1s;
+}
+
+.about {
+    color: #FF44CC;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    border: none;
+    box-shadow: 5px 5px 8px #000;
+}
+.about:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.about:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.about:hover:before {
+    width: 100%;
+    height: 10px;
+}
+.about:hover:after {
+    width: 100%;
+    height: 10px;
+}
+.about:hover {
+    box-shadow:0 0 40px #FF44CC;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #FF44CC;
+    transition: 0.5s;
+}
+.about:active {
+    color: #25274d;
+    background-color: #FF44CC;
+    box-shadow: 0 0 10px #FF44CC, 0 0 40px #FF44CC, 0 0 80px #FF44CC;
+    border: 1px inset #FF44CC;
+    transition: 0.1s;
+}
+.orntwo {
+    color: #25274d;
+    background-color: #FF8300;
+    box-shadow: 0 0 10px #FF8300, 0 0 40px #FF8300, 0 0 80px #FF8300;
+    border: 1px inset #FF8300;
+}
+.orr {
+    color: #FF8300;
+    background-color: rgb(15, 15, 15);
+}
+.grntwo {
+    color: #25274d;
+    background-color: #39FF14;
+    box-shadow: 0 0 10px #39FF14, 0 0 40px #39FF14, 0 0 80px #39FF14;
+    border: 1px inset #39FF14;
+}
+.grr {
+    color: #39FF14;
+    background-color: rgb(15, 15, 15);
+}
+.blutwo {
+    background-color: #64B2EA;
+    box-shadow: 0 0 10px #64B2EA, 0 0 40px #64B2EA, 0 0 80px #64B2EA;
+    border: 1px inset #64B2EA;
+	color: #25274d;
+}
+.blr {
+    background-color: rgb(15, 15, 15);
+	color: #69C6FC;
+	}
+.redtwo {
+    color: #25274d;
+    background-color: #FF3131;
+    box-shadow: 0 0 10px #FF3131, 0 0 40px #FF3131, 0 0 80px #FF3131;
+    border: 1px inset #FF3131;
+}
+.rer {
+    color: #FF3131;
+    background-color: rgb(15, 15, 15);
+}
+.ylwtwo {
+    color: #25274d;
+    background-color: #FFF300;
+    box-shadow: 0 0 10px #FFF300, 0 0 40px #FFF300, 0 0 80px #FFF300;
+    border: 1px inset #FFF300;
+}
+.ylr {
+    color: #FFF300;
+    background-color: rgb(15, 15, 15);
+}
+.orr:active {
+color: #25274d;
+}
+.grr:active {
+color: #25274d;
+}
+.ylr:active {
+color: #25274d;
+}
+.rer:active {
+color: #25274d;
+}
+.blr:active {
+color: #25274d;
+}
+</style>
+</head>
+<body>
+    <button class="hint" onclick="window.location.href='INSERT TIPS PAGE'">Hint</button>
+    <button class="about" onclick="window.location.href='INSERT ABOUT PAGE'">About</button>
+<div class="sub">
+    <div class="sub1">
+<button type="button" id="rd" class="bttn" onclick="red()">Red</button>
+<button type="button" id="blu" class="bttn" onclick="blue()">Blue</button>
+    </div>
+</div>
+<div class="sub">
+    <div class="sub2">
+<button type="button" id="ylw" class="bttn" onclick="yellow()">Yellow</button>
+    </div>
+</div>
+<div class="sub">
+    <div class="sub3">
+<button type="button" id="grn" class="bttn" onclick="green()">Green</button>
+<button type="button" id="orng" class="bttn" onclick="orange()">Orange</button>
+    </div>
+</div>
+<div class="sub">
+    <div class="sub4">
+<button type="button" id="start" class="bttn" 
+onclick="one();setTimeout(two, 1000);setTimeout(three, 2000);setTimeout(four, 3000);setTimeout(five, 4000);
+setTimeout(six, 5000);setTimeout(seven, 6000);setTimeout(eight, 7000);setTimeout(enable, 8000)">
+Start</button>
+</div>
+<script>
+  var element = document.getElementById("blu");
+  element.classList.add("blr");
+  var element = document.getElementById("rd");
+  element.classList.add("rer");
+  var element = document.getElementById("ylw");
+  element.classList.add("ylr");
+  var element = document.getElementById("grn");
+  element.classList.add("grr");
+  var element = document.getElementById("orng");
+  element.classList.add("orr");
+var comb = "0"
+document.getElementById('rd').disabled = true;
+document.getElementById('blu').disabled = true;
+document.getElementById('ylw').disabled = true;
+document.getElementById('grn').disabled = true;
+document.getElementById('orng').disabled = true;
+function red(){
+if (comb == "3"){
+comb = "4"
+} else if (comb == "5"){
+comb = "6"
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function blue(){
+if (comb == "0"){
+comb = "1"
+} else if (comb == "6"){
+comb = "7"
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function yellow(){
+if (comb == "4"){
+comb = "5"
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function green(){
+if (comb == "7"){
+alert("Great job! Moving on to the final level.");
+window.location.href = "Level3.html";
+} else if (comb == "2"){
+comb = "3"
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function orange(){
+if (comb == "1"){
+comb = "2"
+} else {
+document.getElementById('start').disabled = false;
+alert("Try again");
+comb = "0"
+}
+}
+function one(){
+var element = document.getElementById("blu");
+  element.classList.remove("blr");
+  var element = document.getElementById("blu");
+  element.classList.add("blutwo");
+  
+document.getElementById('start').disabled = true;
+document.getElementById("blu").style.opacity = "1";
+}
+function two(){
+var element = document.getElementById("blu");
+  element.classList.remove("blutwo");
+var element = document.getElementById("blu");
+  element.classList.add("blr");
+  
+  var element = document.getElementById("orng");
+  element.classList.remove("orr");
+var element = document.getElementById("orng");
+  element.classList.add("orntwo");
+  document.getElementById("orng").style.opacity = "1";
+}
+function three(){
+var element = document.getElementById("orng");
+  element.classList.remove("orntwo");
+var element = document.getElementById("orng");
+  element.classList.add("orr");
+  
+var element = document.getElementById("grn");
+  element.classList.remove("grr");
+var element = document.getElementById("grn");
+  element.classList.add("grntwo");
+  document.getElementById("grn").style.opacity = "1";
+}
+function four(){
+var element = document.getElementById("grn");
+  element.classList.remove("grntwo");
+var element = document.getElementById("grn");
+  element.classList.add("grr");
+  
+var element = document.getElementById("rd");
+  element.classList.remove("rer");
+var element = document.getElementById("rd");
+  element.classList.add("redtwo");
+  document.getElementById("rd").style.opacity = "1";
+}
+function five(){
+var element = document.getElementById("rd");
+  element.classList.remove("redtwo");
+var element = document.getElementById("rd");
+  element.classList.add("rer");
+  
+var element = document.getElementById("ylw");
+  element.classList.remove("ylr");
+var element = document.getElementById("ylw");
+  element.classList.add("ylwtwo");
+  document.getElementById("ylw").style.opacity = "1";
+}
+function six(){
+var element = document.getElementById("ylw");
+  element.classList.remove("ylwtwo");
+var element = document.getElementById("ylw");
+  element.classList.add("ylr");
+  
+var element = document.getElementById("rd");
+  element.classList.remove("rer");
+var element = document.getElementById("rd");
+  element.classList.add("redtwo");
+  document.getElementById("rd").style.opacity = "1";
+}
+function seven(){
+var element = document.getElementById("rd");
+  element.classList.remove("redtwo");
+var element = document.getElementById("rd");
+  element.classList.add("rer");
+  
+var element = document.getElementById("blu");
+  element.classList.remove("blr");
+  var element = document.getElementById("blu");
+  element.classList.add("blutwo");
+  document.getElementById("blu").style.opacity = "1";
+}
+function eight(){
+var element = document.getElementById("blu");
+  element.classList.remove("blutwo");
+var element = document.getElementById("blu");
+  element.classList.add("blr");
+  
+var element = document.getElementById("grn");
+  element.classList.remove("grr");
+var element = document.getElementById("grn");
+  element.classList.add("grntwo");
+  document.getElementById("grn").style.opacity = "1";
+}
+function enable(){
+var element = document.getElementById("grn");
+  element.classList.remove("grntwo");
+var element = document.getElementById("grn");
+  element.classList.add("grr");
+document.getElementById('rd').disabled = false;
+document.getElementById('blu').disabled = false;
+document.getElementById('ylw').disabled = false;
+document.getElementById('grn').disabled = false;
+document.getElementById('orng').disabled = false;
+document.getElementById('rd').innerHTML = 'Red';
+document.getElementById('blu').innerHTML = 'Blue';
+document.getElementById('ylw').innerHTML = 'Yellow';
+document.getElementById('grn').innerHTML = 'Green';
+document.getElementById('orng').innerHTML = 'Orange';
+}
+</script>
+</body>
+</html>
