@@ -534,7 +534,7 @@ color: #25274d;
 </head>
 <body>
     <button class="hint" onclick="window.location.href='INSERT TIPS PAGE'">Hint</button>
-    <button class="about" onclick="window.location.href='aboutPage.html'">About</button>
+    <button class="about" onclick="about()">About</button>
 <div class="sub">
     <div class="sub1">
 <button type="button" id="rd" class="bttn" onclick="red()">Red</button>
@@ -561,6 +561,9 @@ Start</button>
     </div>
 </div>
 <script>
+function about(){
+	window.location.href = "aboutPage.html";
+}
   var element = document.getElementById("blu");
   element.classList.add("blr");
   var element = document.getElementById("rd");
