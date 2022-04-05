@@ -18,29 +18,36 @@
     background-attachment: fixed;
     font-family: 'Josefin Sans', sans-serif;
 }
+a {
+    text-decoration: none;
+}
 .title {
     font-family: 'Josefin Sans', sans-serif;
     color: #FF44CC;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #0c0b0c;
     position: relative;
-    border-width: 50px;
     height: 50px;
     box-shadow: 5px 5px 8px #000;
-    font-size: 40px;
-    padding: 5px;
+    font-size: 30px;
+    padding: 0;
     margin-bottom: 20px;
-    margin-left: 560px;
+    margin-left: 590px;
+    margin-top: 30px;
+    border: none;
+    width: 150px;
+    height: 50px;
 }
 .instructions{
-  padding: 5px;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
   color: #FF44CC;
   background-color: #0c0b0c;
-  border: 1px inset #FF44CC;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 20px;
   position: absolute;
   bottom: 25%;
-  margin-bottom: 350px;
+  margin-bottom: 300px;
 
 }
 .start{
@@ -51,7 +58,6 @@
 p{
     background-color: #0c0b0c;
     box-shadow: 5px 5px 8px #000;
-    border: 1px inset #FF44CC;
     margin-left: 30px;
     margin-right: 30px;
     position: relative;
@@ -63,30 +69,29 @@ p{
 .pain{
     background-color: #0c0b0c;
     box-shadow: 5px 5px 8px #000;
-    border: 1px inset #FF44CC;
     margin-left: 30px;
     margin-right: 30px;
     position: relative;
-    margin-top: 70px;
+    margin-top: 10px;
     padding: 3px;
     color: #FF44CC;
     font-family: Verdana, sans-serif;
 }
 .cheatsheet{
-  padding: 5px;
+    width: 150px;
+  text-align: center;
+  padding: 10px;
   color: #FF44CC;
   background-color: #0c0b0c;
-  border: 1px inset #FF44CC;
-  font-size: 30px;
+  font-size: 20px;
   position: absolute;
   bottom: 25%;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   margin-right: 60px ;
 }
 .cheats{
     background-color: #0c0b0c;
     box-shadow: 5px 5px 8px #000;
-    border: 1px inset #FF44CC;
     margin-left: 30px;
     margin-right: 30px;
     position: relative;
@@ -97,10 +102,136 @@ p{
     margin-top: 100px;
 
 }
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 40px;
+    color: #FF44CC;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    box-shadow: 5px 5px 8px #000;
+}
+.back:hover,.back:focus,.title:hover,.title:focus {
+    outline: none;
+}
+.platinum {
+    margin-top: 130px;
+}
+.title:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.instructions:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.instructions:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.cheatsheet:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.cheatsheet:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
+}
 
+.back:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.back:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.back:hover:before {
+    width: 100%;
+    height: 10px;
+}
+.back:hover:after {
+    width: 100%;
+    height: 10px;
+}
+.back:hover {
+    box-shadow:0 0 40px #FF44CC;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #FF44CC;
+    transition: 0.5s;
+}
+.back:active {
+    color: #25274d;
+    background-color: #FF44CC;
+    box-shadow: 0 0 10px #FF44CC, 0 0 40px #FF44CC, 0 0 80px #FF44CC;
+    border: 1px inset #FF44CC;
+    transition: 0.1s;
+}
     </style>
     <body>
-        <a class="title" href="Level1.html">  Hints  </a>
+        <button class="back" onclick="window.location.href='index.html'">Go Back</button>
+        <button class="title">  Hints  </button>
         <div>
             <p class="instructions">
                 Instructions
@@ -110,13 +241,13 @@ p{
             <p class="pain">
                 1. Click the <span class="start" >"Start"</span> button to begin a level.
             </p>
-            <p>
+            <p class="pain">
                 2. Follow the numbers as they count down from 1 to 5.
             </p>
-            <p>
+            <p class="pain">
                 3. Click the boxes in order. If you click the wrong box, your progress will be restarted to the beginning.
             </p>
-            <p>
+            <p class="pain">
                 4. If you click the boxes in the right order, you will be congratulated and moved on to the next level.
             </p>
         </div>
