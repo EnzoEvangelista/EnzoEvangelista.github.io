@@ -23,35 +23,141 @@ body {
 .title {
     font-family: 'Josefin Sans', sans-serif;
     color: #FF44CC;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-width: 50px;
-    border: #FF44CC solid 4px;
-    height: 50px;
+    background-color: #0c0b0ca2;
+    height: 60px;
+    width: 500px;
+    border: none;
     box-shadow: 5px 5px 8px #000;
     font-size: 40px;
     padding: 10px;
     position: relative;
     text-align: center;
+    box-shadow:0 0 30px #FF44CC;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.1), 0 0 0.45em #FF44CC;
    
 }
 p{
     color: #FF44CC;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #0c0b0ca2;
     box-shadow: 5px 5px 8px #000;
-    border: 1px inset #FF44CC;
     margin-left: 30px;
     margin-right: 30px;
     position: relative;
     margin-top: 30px;
-    padding: 3px;
+    padding: 15px 10px;
     font-family: Verdana, sans-serif;
-
+}
+.titlecont{
+    width: 500px;
+    margin: 30px auto;
+}
+.back:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.back:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.back:hover:before {
+    width: 100%;
+    height: 10px;
+}
+.back:hover:after {
+    width: 100%;
+    height: 10px;
+}
+.back:hover {
+    box-shadow:0 0 40px #FF44CC;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5), 0 0 0.45em #FF44CC;
+    transition: 0.5s;
+}
+.back:active {
+    color: #25274d;
+    background-color: #FF44CC;
+    box-shadow: 0 0 10px #FF44CC, 0 0 40px #FF44CC, 0 0 80px #FF44CC;
+    border: 1px inset #FF44CC;
+    transition: 0.1s;
+}
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 40px;
+    color: #FF44CC;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    box-shadow: 5px 5px 8px #000;
+}
+.back:hover,.back:focus,.title:hover,.title:focus {
+    outline: none;
+}
+.title:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+.title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+p:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 80%;
+    border-top: 2px solid #FF44CC;
+    border-left: 2px solid #FF44CC;
+    transition: 0.5s;
+}
+p:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 80%;
+    border-bottom: 2px solid #FF44CC;
+    border-right: 2px solid #FF44CC;
+    transition: 0.5s;
 }
 </style>
 </head>
 <body>
-    <a class="title" href="Level1.html">  About the Developers  </a>
-
+    <button class="back" onclick="window.location.href='index.html'">Go Back</button>
+    <div class="titlecont">
+    <button class="title">  About the Developers  </button>
+    </div>
     <div>
         <p>Adrian Lee Delos Santos<br>
         <i class="fas fa-arrow-right"> coded the template and the Cascading Style Sheet (CSS) for Level 1.
