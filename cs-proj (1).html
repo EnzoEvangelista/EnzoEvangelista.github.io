@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewpoint" content="width=device-width, Initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Computer Subject</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+body { 
+background-color: #fffffa;
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(176,224,230,1);
+	padding-left: 10vw;
+}
+
+.home .content{
+    max-width: 50vw;
+}
+
+.home .content h3{
+    font-size: 6vw;
+    color:#333;
+}
+
+.home .content span{
+    font-size: 3.5vw;
+    color:var(--orange);
+    padding:1vw 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5vw;
+    color:#999;
+    padding:1vw 0;
+    line-height: 1.5;
+}
+span{
+    color: orange;
+}
+h3 {
+font-weight: bold;
+}
+.heading {
+    background:rgba(160, 160, 160,.05);
+	font-weight: bold;
+	font-size: 5vw;
+	text-align: center;
+	padding: 1vw;
+	margin-bottom: 4vw;
+	}
+.r {
+text-align: center;
+background-color: red;
+}
+.iuo {
+margin-bottom: 100px;
+}
+.boc{
+background-color: white;
+border-radius: 8px;
+margin: .5vw;
+text-align: center;
+padding: 2vw;
+border: 1px solid lightgray;
+font-size: 2vw;
+font-weight: bold;
+}
+.imag {
+height: auto;
+width:100%;
+padding-bottom: 10px;
+}
+.pric {
+color: orange;
+}
+.addcart {
+width: 100%;
+border: none;
+color: white;
+background-color: orange;
+border-radius: 8px;
+}
+.bigboc {
+    background:rgba(160, 160, 160,.05);
+border: 1px solid lightgray;
+border-radius: 10px;
+color: orange;
+padding-bottom: 2vw;
+margin-bottom: 5vw;
+}
+.mainprod {
+font-weight: bold;
+font-size: 4vw;
+padding: 0.5vw;
+}
+.foot {
+	Background-color: orange;
+	color: white;
+	text-align: center;
+	padding-bottom: 10px;
+	font-family: Verdana, Sans-serif;
+	font-size: 0.8vw;
+}
+.ftitle {
+	font-family: Verdana, Sans-serif;
+	font-weight: bold;
+	padding-top: 30px;
+	font-size: 2.5vw;
+	line-height: 10px;
+	padding-bottom: 15px;
+}
+.btmtext {
+	font-size: 0.6vw;
+	color: #ffd280;
+}
+.forme {
+background-color: orange;
+color: white;
+border-radius: 10px;
+margin-bottom: 5vw;
+padding: 1vw;
+font-size: 1.5vw;
+}
+input {
+width: 100%;
+}
+.submi {
+margin-top: 2.2vw;
+color: orange;
+background-color: white;
+border: 1px solid gray;
+}
+.wurd {
+font-weight: bold;
+font-size: 3vw;
+}
+	.list-group-item {
+	margin: 0;
+	text-align: left;
+	border: none;
+	color: orange
+	}
+.nav {
+	margin-bottom: 4vw;
+	text-decoration: none;
+	color: orange;
+	padding-left: 1vw;
+	font-size: 2vw;
+    background-color: rgba(176,224,230,1);
+}
+.aa {
+text-decoration: none;
+color: orange;
+font-weight: bold;
+}
+ul {
+list-style-type: none;
+}
+.tot {
+font-size: 1.8vw;
+font-weight: bold;
+}
+</style>
+<body>
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Shoopee</h3>
+        <span class="thin">Anything and everything! all of the time!</span>
+    </div>
+</section>
+<div class="container-fluid nav">
+<a href="index.html" class="aa">Home</a>
+ | 
+<a href="about.html" class="aa">About</a>
+</div>
+    <div class="container">
+	<h1 class="heading"><span>Products</span> </h1>
+	</div>
+<div class="container bigboc">
+<h1 class="mainprod">Hats</h1>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Hat1.jpg" alt="product" class="imag">
+Gray cap
+<div class="pric">
+₱600
+</div>
+<button class="addcart" onclick="c1add()" id="c1add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Hat2.jpg" alt="product" class="imag">
+White cap
+<div class="pric">
+₱700
+</div>
+<button class="addcart" onclick="c2add()" id="c2add">
+Add to cart
+</button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Hat3.jpg" alt="product" class="imag">
+Fedora
+<div class="pric">
+₱1300
+</div>
+<button class="addcart" onclick="c3add()" id="c3add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Hat4.jpg" alt="product" class="imag">
+Top hat
+<div class="pric">
+₱2100
+</div>
+<button class="addcart" onclick="c4add()" id="c4add">
+Add to cart
+</button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Hat5.jpg" alt="product" class="imag">
+Adventurer's hat
+<div class="pric">
+₱900
+</div>
+<button class="addcart" onclick="c5add()" id="c5add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Hat6.jpg" alt="product" class="imag">
+Santa hat
+<div class="pric">
+₱1000
+</div>
+<button class="addcart" onclick="c6add()" id="c6add">
+Add to cart
+</button>
+</div>
+</div>
+</div> 
+
+
+
+<div class="container bigboc">
+<h1 class="mainprod">Bags</h1>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Bag1.jpg" alt="product" class="imag">
+Orange handbag
+<div class="pric">
+₱2300
+</div>
+<button class="addcart" onclick="a1add()" id="a1add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Bag2.jpg" alt="product" class="imag">
+Blue winter backpack
+<div class="pric">
+₱2900
+</div>
+<button class="addcart" onclick="a2add()" id="a2add">
+Add to cart
+</button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Bag3.jpg" alt="product" class="imag">
+Leather handbag
+<div class="pric">
+₱3400
+</div>
+<button class="addcart" onclick="a3add()" id="a3add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/bag4.jpg" alt="product" class="imag">
+White drawstring bag
+<div class="pric">
+₱1600
+</div>
+<button class="addcart" onclick="a4add()" id="a4add">
+Add to cart
+</button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Bag5.jpg" alt="product" class="imag">
+Yellow handbag
+<div class="pric">
+₱1500
+</div>
+<button class="addcart" onclick="a5add()" id="a5add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Bag6.jpg" alt="product" class="imag">
+Gucci handbag
+<div class="pric">
+₱12800
+</div>
+<button class="addcart" onclick="a6add()" id="a6add">
+Add to cart
+</button>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="container bigboc">
+<h1 class="mainprod">Clothes</h1>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/clothes1.jpg" alt="product" class="imag">
+White t-shirt
+<div class="pric">
+₱400
+</div>
+<button class="addcart" onclick="b1add()" id="b1add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Clothes2.jpg" alt="product" class="imag">
+Blue pants
+<div class="pric">
+₱1300
+</div>
+<button class="addcart" onclick="b2add()" id="b2add">
+Add to cart
+</button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Clothes3.jpg" alt="product" class="imag">
+Tuxedo
+<div class="pric">
+₱8300
+</div>
+<button class="addcart" onclick="b3add()" id="b3add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Clothes4.jpg" alt="product" class="imag">
+Blue jacket
+<div class="pric">
+₱3600
+</div>
+<button class="addcart" onclick="b4add()" id="b4add">
+Add to cart
+</button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Clothes5.jpg" alt="product" class="imag">
+Red shorts
+<div class="pric">
+₱700
+</div>
+<button class="addcart" onclick="b5add()" id="b5add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Clothes6.jpg" alt="product" class="imag">
+White polo shirt
+<div class="pric">
+₱1800
+</div>
+<button class="addcart" onclick="b6add()" id="b6add">
+Add to cart
+</button>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="container bigboc">
+<h1 class="mainprod">Phones</h1>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Phone1.jpg" alt="product" class="imag">
+Samsung note 10
+<div class="pric">
+₱22300
+</div>
+<button class="addcart" onclick="d1add()" id="d1add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Phone2.jpg" alt="product" class="imag">
+Huawei p20 pro
+<div class="pric">
+₱14900
+</div>
+<button class="addcart" onclick="d2add()" id="d2add">
+Add to cart
+</button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Phone3.jpg" alt="product" class="imag">
+Huawei p30 pro
+<div class="pric">
+₱19400
+</div>
+<button class="addcart" onclick="d3add()" id="d3add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Phone4.jpg" alt="product" class="imag">
+Iphone 12
+<div class="pric">
+₱24200
+</div>
+<button class="addcart" onclick="d4add()" id="d4add">
+Add to cart
+</button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Phone5.jpg" alt="product" class="imag">
+Iphone 7
+<div class="pric">
+₱8900
+</div>
+<button class="addcart" onclick="d5add()" id="d5add">
+Add to cart
+</button>
+</div>
+<div class="col-sm-5 boc">
+<img src="Images/Phone6.jpg" alt="product" class="imag">
+Xiaomi mi 10
+<div class="pric">
+₱20800
+</div>
+<button class="addcart" onclick="d6add()" id="d6add">
+Add to cart
+</button>
+</div>
+</div>
+</div>
+
+
+<div class="container forme">
+<div class="row">
+<div class="col-sm-4 bohn">
+<h2 class="wurd">
+Cart:
+</h2>
+<ul class="list-group" id="cart">
+
+</ul>
+<div class="tot">Total in ₱: </div>
+<div id="total" class="total">
+</div>
+</div>
+<div class="col-sm-8">
+<form action="http://sirjm.infinityfreeapp.com/checkout.php" method="GET">
+<div>
+<label>Name:</label>
+<input type="text" name="cust_name">
+</div>
+<div>
+<label>Email:</label>
+<input type="text" name="cust_email">
+</div>
+<div>
+<label>Delivery Address:</label>
+<input type="text" name="cust_addr">
+</div>
+<input type="hidden" name="cust_order" id="order">
+<input type="submit" value="Submit" onclick="submi()" class="submi">
+</form>
+</div>
+</div>
+</div>
+
+
+    <div class="foot container">
+<h1 class="ftitle">Shoopee</h1>
+<img src="Images/Yt.png" alt="Youtube logo" height="30">
+<img src="Images/Fb.png" alt="Facebook logo" height="30"> 
+<img src="Images/Ins.png" alt="Instagram logo" height="30">
+<img src="Images/Twt.png" alt="Twitter logo" height="30">
+<div>Info | Support | Marketing</div>
+<div>Terms of use | Privacy policy</div>
+<div class="btmtext">&#169; Copyright 2021: ShopAtShoopee.com</div>
+</div>
+<script>
+var order = [];
+
+var c1s = 1
+var c1 = {
+    prod_name: "Gray cap",
+	prod_price: 600
+	};
+	
+var c2s = 1
+var c2 = {
+    prod_name: "White cap",
+	prod_price: 700
+	};	
+	
+var c3s = 1
+var c3 = {
+    prod_name: "Fedora",
+	prod_price: 1300
+	};
+
+var c4s = 1
+var c4 = {
+    prod_name: "Top hat",
+	prod_price: 2100
+	};	
+	
+var c5s = 1
+var c5 = {
+    prod_name: "Adventurers hat",
+	prod_price: 900
+	};
+	
+var c6s = 1
+var c6 = {
+    prod_name: "Santa hat",
+	prod_price: 1000
+	};
+	
+var a1s = 1
+var a1 = {
+    prod_name: "Orange handbag",
+	prod_price: 2300
+	};
+	
+var a2s = 1
+var a2 = {
+    prod_name: "Blue winter backpack",
+	prod_price: 2900
+	};	
+	
+var a3s = 1
+var a3 = {
+    prod_name: "Leather handbag",
+	prod_price: 3400
+	};
+	
+var a4s = 1
+var a4 = {
+    prod_name: "White drawstring bag",
+	prod_price: 1600
+	};
+	
+var a5s = 1
+var a5 = {
+    prod_name: "Yellow handbag",
+	prod_price: 1500
+	};	
+	
+var a6s = 1
+var a6 = {
+    prod_name: "Gucci handbag",
+	prod_price: 12800
+	};
+/*gap*/
+var b1s = 1
+var b1 = {
+    prod_name: "White t-shirt",
+	prod_price: 400
+	};
+	
+var b2s = 1
+var b2 = {
+    prod_name: "Blue pants",
+	prod_price: 1300
+	};	
+	
+var b3s = 1
+var b3 = {
+    prod_name: "Tuxedo",
+	prod_price: 8300
+	};
+	
+var b4s = 1
+var b4 = {
+    prod_name: "Blue jacket",
+	prod_price: 3600
+	};
+	
+var b5s = 1
+var b5 = {
+    prod_name: "Red shorts",
+	prod_price: 700
+	};	
+	
+var b6s = 1
+var b6 = {
+    prod_name: "White polo shirt",
+	prod_price: 1800
+	};
+	
+var d1s = 1
+var d1 = {
+    prod_name: "Samsung note 10",
+	prod_price: 22300
+	};
+	
+var d2s = 1
+var d2 = {
+    prod_name: "Huawei p20 pro",
+	prod_price: 14900
+	};	
+	
+var d3s = 1
+var d3 = {
+    prod_name: "Huawei p30 pro",
+	prod_price: 19400
+	};
+	
+var d4s = 1
+var d4 = {
+    prod_name: "Iphone 12",
+	prod_price: 24200
+	};
+	
+var d5s = 1
+var d5 = {
+    prod_name: "Iphone 7",
+	prod_price: 8900
+	};	
+	
+var d6s = 1
+var d6 = {
+    prod_name: "Xiaomi mi 10",
+	prod_price: 20800
+	};
+var total = 0
+document.getElementById("total").innerHTML = total;
+    function c1add(){
+document.getElementById("cart").innerHTML += "<div id='c1'  onclick='c1rmv()'><li id='c' id='list-group-item'>Gray cap<br>Price: ₱ 600 (click this to remove)<br><br></li></div>";
+        document.getElementById("c1add").disabled = true;
+        total += 600
+        document.getElementById("total").innerHTML = total;
+		c1s = 0
+}
+
+    function c2add(){
+document.getElementById("cart").innerHTML += "<div id='c2' onclick='c2rmv()'><li id='c' id='list-group-item'>White cap<br>Price: ₱ 700 (click this to remove)<br><br></li></div>";
+        document.getElementById("c2add").disabled = true;
+        total += 700
+        document.getElementById("total").innerHTML = total;
+		c2s = 0
+}
+
+    function c3add(){
+document.getElementById("cart").innerHTML += "<div id='c3' onclick='c3rmv()'><li id='c' id='list-group-item'>Fedora<br>Price: ₱ 1300 (click this to remove)<br><br></li></div>";
+        document.getElementById("c3add").disabled = true;
+        total += 1300
+        document.getElementById("total").innerHTML = total;
+		c3s = 0
+}
+
+function c4add(){
+document.getElementById("cart").innerHTML += "<div id='c4' onclick='c4rmv()'><li id='c' id='list-group-item'>Top hat<br>Price: ₱ 2100 (click this to remove)<br><br></li></div>";
+        document.getElementById("c4add").disabled = true;
+        total += 2100
+        document.getElementById("total").innerHTML = total;
+		c4s = 0
+}
+
+    function c5add(){
+document.getElementById("cart").innerHTML += "<div id='c5' onclick='c5rmv()'><li id='c' id='list-group-item'>Adventurers hat<br>Price: ₱ 900 (click this to remove)<br><br></li></div>";
+        document.getElementById("c5add").disabled = true;
+        total += 900
+        document.getElementById("total").innerHTML = total;
+		c5s = 0
+}
+
+    function c6add(){
+document.getElementById("cart").innerHTML += "<div id='c6' onclick='c6rmv()'><li id='c' id='list-group-item'>Santa hat<br>Price: ₱ 1000 (click this to remove)<br><br></li></div>";
+        document.getElementById("c6add").disabled = true;
+        total += 1000
+        document.getElementById("total").innerHTML = total;
+		c6s = 0
+}
+/*gap*/
+function a1add(){
+document.getElementById("cart").innerHTML += "<div id='a1' onclick='a1rmv()'><li id='a' id='list-group-item'>Orange handbag<br>Price: ₱ 2300 (click this to remove)<br><br></li></div>";
+        document.getElementById("a1add").disabled = true;
+        total += 2300
+        document.getElementById("total").innerHTML = total;
+		a1s = 0
+}
+
+    function a2add(){
+document.getElementById("cart").innerHTML += "<div id='a2' onclick='a2rmv()'><li id='a' id='list-group-item'>Blue winter backpack<br>Price: ₱ 2900 (click this to remove)<br><br></li>";
+        document.getElementById("a2add").disabled = true;
+        total += 2900
+        document.getElementById("total").innerHTML = total;
+		a2s = 0
+}
+
+    function a3add(){
+document.getElementById("cart").innerHTML += "<div id='a3' onclick='a3rmv()'><li id='a' id='list-group-item'>Leather handbag<br>Price: ₱ 3400 (click this to remove)<br><br></li></div>";
+        document.getElementById("a3add").disabled = true;
+        total += 3400
+        document.getElementById("total").innerHTML = total;
+		a3s = 0
+}
+
+function a4add(){
+document.getElementById("cart").innerHTML += "<div id='a4' onclick='a4rmv()'><li id='a' id='list-group-item'>White drawstring bag<br>Price: ₱ 1600 (click this to remove)<br><br></li></div>";
+        document.getElementById("a4add").disabled = true;
+        total += 1600
+        document.getElementById("total").innerHTML = total;
+		a4s = 0
+}
+
+    function a5add(){
+document.getElementById("cart").innerHTML += "<div id='a5' onclick='a5rmv()'><li id='a' id='list-group-item'>Yellow handbag<br>Price: ₱ 1500 (click this to remove)<br><br></li></div>";
+        document.getElementById("a5add").disabled = true;
+        total += 1500
+        document.getElementById("total").innerHTML = total;
+		a5s = 0
+}
+
+    function a6add(){
+document.getElementById("cart").innerHTML += "<div id='a6' onclick='a6rmv()'><li id='a' id='list-group-item'>Gucci handbag<br>Price: ₱ 12800 (click this to remove)<br><br></li></div>";
+        document.getElementById("a6add").disabled = true;
+        total += 12800
+        document.getElementById("total").innerHTML = total;
+		a6s = 0
+}
+
+function b1add(){
+document.getElementById("cart").innerHTML += "<div id='b1' onclick='b1rmv()'><li id='b' id='list-group-item'>White t-shirt<br>Price: ₱ 400 (click this to remove)<br><br></li></div>";
+        document.getElementById("b1add").disabled = true;
+        total += 400
+        document.getElementById("total").innerHTML = total;
+		b1s = 0
+}
+
+    function b2add(){
+document.getElementById("cart").innerHTML += "<div id='b2' onclick='b2rmv()'><li id='b' id='list-group-item'>Blue pants<br>Price: ₱ 1300 (click this to remove)<br><br></li></div>";
+        total += 1300
+        document.getElementById("total").innerHTML = total;
+		b2s = 0
+}
+
+    function b3add(){
+document.getElementById("cart").innerHTML += "<div id='b3' onclick='b3rmv()'><li id='b' id='list-group-item'>Tuxedo<br>Price: ₱ 8300 (click this to remove)<br><br></li></div>";
+        document.getElementById("b3add").disabled = true;
+        total += 8300
+        document.getElementById("total").innerHTML = total;
+		b3s = 0
+}
+
+function b4add(){
+document.getElementById("cart").innerHTML += "<div id='b4' onclick='b4rmv()'><li id='b' id='list-group-item'>Blue jacket<br>Price: ₱ 3600 (click this to remove)<br><br></li></div>";
+        document.getElementById("b4add").disabled = true;
+        total += 3600
+        document.getElementById("total").innerHTML = total;
+		b4s = 0
+}
+
+    function b5add(){
+document.getElementById("cart").innerHTML += "<div id='b5' onclick='b5rmv()'><li id='b' id='list-group-item'>Red shorts<br>Price: ₱ 700 (click this to remove)<br><br></li></div>";
+        document.getElementById("b5add").disabled = true;
+        total += 700
+        document.getElementById("total").innerHTML = total;
+		b5s = 0
+}
+
+    function b6add(){
+document.getElementById("cart").innerHTML += "<div id='b6' onclick='b6rmv()'><li id='b' id='list-group-item'>White polo shirt<br>Price: ₱ 1800 (click this to remove)<br><br></li></div>";
+        document.getElementById("b6add").disabled = true;
+        total += 1800
+        document.getElementById("total").innerHTML = total;
+		b6s = 0
+}
+
+function d1add(){
+document.getElementById("cart").innerHTML += "<div id='d1' onclick='d1rmv()'><li id='d' id='list-group-item'>Samsung note 10<br>Price: P 22300 (click this to remove)<br><br></li></div>";
+        document.getElementById("d1add").disabled = true;
+        total += 22300
+        document.getElementById("total").innerHTML = total;
+		d1s = 0
+}
+
+    function d2add(){
+document.getElementById("cart").innerHTML += "<div id='d2' onclick='d2rmv()'><li id='d' id='list-group-item'>Huawei p20 pro<br>Price: ₱ 14900 (click this to remove)<br><br></li></div>";
+        document.getElementById("d2add").disabled = true;
+        total += 14900
+        document.getElementById("total").innerHTML = total;
+		d2s = 0
+}
+
+    function d3add(){
+document.getElementById("cart").innerHTML += "<div id='d3' onclick='d3rmv()'><li id='d' id='list-group-item'>Huawei p30 pro<br>Price: ₱ 19400 (click this to remove)<br><br></li></div>";
+        document.getElementById("d3add").disabled = true;
+        total += 19400
+        document.getElementById("total").innerHTML = total;
+		d3s = 0
+}
+
+function d4add(){
+document.getElementById("cart").innerHTML += "<div id='d4' onclick='d4rmv()'><li id='d' id='list-group-item'>Iphone 12<br>Price: ₱ 24200 (click this to remove)<br><br></li></div>";
+        document.getElementById("d4add").disabled = true;
+        total += 24200
+        document.getElementById("total").innerHTML = total;
+		d4s = 0
+}
+
+    function d5add(){
+document.getElementById("cart").innerHTML += "<div id='d5' onclick='d5rmv()'><li id='d' id='list-group-item'>Iphone 7<br>Price: ₱ 8900 (click this to remove)<br><br></li></div>";
+		document.getElementById("d5add").disabled = true;
+        total += 8900
+		        document.getElementById("total").innerHTML = total;
+		d5s = 0
+}
+
+    function d6add(){
+document.getElementById("cart").innerHTML += "<div id='d6' onclick='d6rmv()'><li id='d' id='list-group-item'>Xiaomi mi 10<br>Price: ₱ 20800 (click this to remove)<br><br></li></div>";
+        document.getElementById("d6add").disabled = true;
+        total += 20800
+        document.getElementById("total").innerHTML = total;
+		d6s = 0
+}
+/*gap*/
+    function c1rmv(){
+document.getElementById("c1").innerHTML = "";
+ c1s = 1
+document.getElementById("c1add").disabled = false;
+        total -= 600
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c2rmv(){
+document.getElementById("c2").innerHTML = "";
+ c2s = 1
+document.getElementById("c2add").disabled = false;
+        total -= 700
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c3rmv(){
+document.getElementById("c3").innerHTML = "";
+ c3s = 1
+document.getElementById("c3add").disabled = false;
+        total -= 1300
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c4rmv(){
+document.getElementById("c4").innerHTML = "";
+ c4s = 1
+document.getElementById("c4add").disabled = false;
+        total -= 2100
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c5rmv(){
+document.getElementById("c5").innerHTML = "";
+ c5s = 1
+document.getElementById("c5add").disabled = false;
+        total -= 900
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c6rmv(){
+document.getElementById("c6").innerHTML = "";
+ c6s = 1
+document.getElementById("c6add").disabled = false;
+        total -= 1000
+        document.getElementById("total").innerHTML = total;
+	}
+/*gap*/
+function a1rmv(){
+document.getElementById("a1").innerHTML = "";
+ a1s = 1
+document.getElementById("a1add").disabled = false;
+        total -= 2300
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a2rmv(){
+document.getElementById("a2").innerHTML = "";
+ a2s = 1
+document.getElementById("a2add").disabled = false;
+        total -= 2900
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a3rmv(){
+document.getElementById("a3").innerHTML = "";
+ a3s = 1
+document.getElementById("a3add").disabled = false;
+        total -= 3400
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a4rmv(){
+document.getElementById("a4").innerHTML = "";
+ a4s = 1
+document.getElementById("a4add").disabled = false;
+        total -= 1600
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a5rmv(){
+document.getElementById("a5").innerHTML = "";
+ a5s = 1
+document.getElementById("a5add").disabled = false;
+        total -= 1500
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a6rmv(){
+document.getElementById("a6").innerHTML = "";
+ a6s = 1
+document.getElementById("a6add").disabled = false;
+        total -= 12800
+        document.getElementById("total").innerHTML = total;
+	}
+/*gap*/
+function b1rmv(){
+document.getElementById("b1").innerHTML = "";
+ b1s = 1
+document.getElementById("b1add").disabled = false;
+        total -= 400
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b2rmv(){
+document.getElementById("b2").innerHTML = "";
+ b2s = 1
+document.getElementById("b2add").disabled = false;
+        total -= 1300
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b3rmv(){
+document.getElementById("b3").innerHTML = "";
+ b3s = 1
+document.getElementById("b3add").disabled = false;
+        total -= 8300
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b4rmv(){
+document.getElementById("b4").innerHTML = "";
+ b4s = 1
+document.getElementById("b4add").disabled = false;
+        total -= 3600
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b5rmv(){
+document.getElementById("b5").innerHTML = "";
+ b5s = 1
+document.getElementById("b5add").disabled = false;
+        total -= 700
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b6rmv(){
+document.getElementById("b6").innerHTML = "";
+ b6s = 1
+document.getElementById("b6add").disabled = false;
+        total -= 1800
+        document.getElementById("total").innerHTML = total;
+	}
+/*gap*/
+function d1rmv(){
+document.getElementById("d1").innerHTML = "";
+ d1s = 1
+document.getElementById("d1add").disabled = false;
+        total -= 22300
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d2rmv(){
+document.getElementById("d2").innerHTML = "";
+ d2s = 1
+document.getElementById("d2add").disabled = false;
+        total -= 14900
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d3rmv(){
+document.getElementById("d3").innerHTML = "";
+ d3s = 1
+document.getElementById("d3add").disabled = false;
+        total -= 19400
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d4rmv(){
+document.getElementById("d4").innerHTML = "";
+ d4s = 1
+document.getElementById("d4add").disabled = false;
+        total -= 24200
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d5rmv(){
+document.getElementById("d5").innerHTML = "";
+ d5s = 1
+document.getElementById("d5add").disabled = false;
+        total -= 8900
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d6rmv(){
+document.getElementById("d6").innerHTML = "";
+ d6s = 1
+document.getElementById("d6add").disabled = false;
+        total -= 20800
+        document.getElementById("total").innerHTML = total;
+	}
+
+	function submi(){
+	    if (c1s == 0) {
+	        order.push(c1);
+	    }
+		
+	    if (c2s == 0) {
+	        order.push(c2);
+	    }
+		
+	    if (c3s == 0) {
+	        order.push(c3);
+	    }
+	    if (c4s == 0) {
+	        order.push(c4);
+	    }
+		
+	    if (c5s == 0) {
+	        order.push(c5);
+	    }
+		
+	    if (c6s == 0) {
+	        order.push(c6);
+	    }
+/*gap*/
+	    if (a1s == 0) {
+	        order.push(a1);
+	    }
+		
+	    if (a2s == 0) {
+	        order.push(a2);
+	    }
+		
+	    if (a3s == 0) {
+	        order.push(a3);
+	    }
+	    if (a4s == 0) {
+	        order.push(a4);
+	    }
+		
+	    if (a5s == 0) {
+	        order.push(a5);
+	    }
+		
+	    if (a6s == 0) {
+	        order.push(a6);
+	    }
+/*gap*/
+	    if (b1s == 0) {
+	        order.push(b1);
+	    }
+		
+	    if (b2s == 0) {
+	        order.push(b2);
+	    }
+		
+	    if (b3s == 0) {
+	        order.push(b3);
+	    }
+	    if (b4s == 0) {
+	        order.push(b4);
+	    }
+		
+	    if (b5s == 0) {
+	        order.push(b5);
+	    }
+		
+	    if (b6s == 0) {
+	        order.push(b6);
+	    }
+/*gap*/
+	    if (d1s == 0) {
+	        order.push(d1);
+	    }
+		
+	    if (d2s == 0) {
+	        order.push(d2);
+	    }
+		
+	    if (d3s == 0) {
+	        order.push(d3);
+	    }
+	    if (d4s == 0) {
+	        order.push(d4);
+	    }
+		
+	    if (d5s == 0) {
+	        order.push(d5);
+	    }
+		
+	    if (d6s == 0) {
+	        order.push(d6);
+	    }
+		var ordstring = JSON.stringify(order);
+		document.getElementById("order").value = ordstring;
+	}
+	</script>
+	</body>
+</html>
